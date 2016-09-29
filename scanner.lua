@@ -1,3 +1,3 @@
 term.clear()
-term.setCursorPos()
+term.setCursorPos(1,1)
 term.write("Hello")
