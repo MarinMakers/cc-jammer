@@ -16,18 +16,18 @@ end
 
 for i=1,#sides do
 	term.write(sides[i])
--- 	if (peripheral.getType(sides[i]) == "modem" and peripheral.call(sides[i], 'isWireless')) then
--- 		modem = peripheral.wrap(sides[i])
--- 		break
--- 	end
+	if (peripheral.getType(sides[i]) == "modem" and peripheral.call(sides[i], 'isWireless')) then
+		modem = peripheral.wrap(sides[i])
+		break
+	end
 end
 
 
 if (modem) then
-	while true do
-		signalJam()
-		sleep(10)
-	end
+-- 	while true do
+-- 		signalJam()
+-- 		sleep(10)
+-- 	end
 else
 	term.write("No wireless modem found... Exiting.")
 end
