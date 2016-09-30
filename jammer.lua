@@ -28,6 +28,6 @@ if (modem) then
 		signalJam()
 		sleep(10)
 	end
-else do
+else
 	term.write("No wireless modem found... Exiting.")
 end
