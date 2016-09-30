@@ -1,13 +1,19 @@
 -- jammer
 
 term.clear()
-term.setCursorPos(1,2)
-term.write("Scanning 1- for open frequencies...")
+term.setCursorPos(1,1)
 
 sides = {'front','back','left','right','top','bottom'}
 
-function signalJam(m)
+function enter(p) 
+	oldx, oldy = p.getCursorPos()
+	p.setCursorPos(1,(oldy+1))
+end
+
+function signalJam(m,p)
 	for i=1,65535 do
+		p.clearLine()
+		p.write("Channel "..tostring(i))
 		m.open(i)
 		m.transmit(i,i,"-Static-")
 		m.close(i)
@@ -23,8 +29,10 @@ end
 
 
 if (modem) then
+	term.write("Scanning 1- for open frequencies...")
+	enter(term)
 	while true do
-		signalJam(modem)
+		signalJam(modem,term)
 		sleep(10)
 	end
 else
