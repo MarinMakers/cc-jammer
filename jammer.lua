@@ -13,6 +13,8 @@ end
 function signalJam(m,p)
 	for i=1,65535 do
 		p.clearLine()
+		_,poldy = p.getCursorPos()
+		p.setCursorPos(1,(poldy))
 		p.write("Channel "..tostring(i))
 		m.open(i)
 		m.transmit(i,i,"-Static-")
