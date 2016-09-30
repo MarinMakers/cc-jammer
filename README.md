@@ -1,2 +1,2 @@
-# cc-scanner
-A wireless frequency scanner for ComputerCraft
+# cc-jammer
+A wireless frequency jammer for ComputerCraft. Cycles through all wireless sygnals and transmits bad messages.
