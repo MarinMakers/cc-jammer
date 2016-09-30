@@ -17,6 +17,7 @@ function signalJam(m,p)
 		m.open(i)
 		m.transmit(i,i,"-Static-")
 		m.close(i)
+		sleep(0.10)
 	end
 end
 
@@ -29,7 +30,7 @@ end
 
 
 if (modem) then
-	term.write("Scanning 1- for open frequencies...")
+	term.write("Jamming open channels...")
 	enter(term)
 	while true do
 		signalJam(modem,term)
