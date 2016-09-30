@@ -19,7 +19,6 @@ function signalJam(m,p)
 		m.open(i)
 		m.transmit(i,i,"-Static-")
 		m.close(i)
-		sleep(0.10)
 	end
 end
 
