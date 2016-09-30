@@ -15,10 +15,11 @@ function signalJam() do
 end
 
 for i=1,#sides do
-	if (peripheral.getType(sides[i]) == "modem" and peripheral.call(sides[i], 'isWireless')) then
-		modem = peripheral.wrap(sides[i])
-		break
-	end
+	term.write(sides[i])
+-- 	if (peripheral.getType(sides[i]) == "modem" and peripheral.call(sides[i], 'isWireless')) then
+-- 		modem = peripheral.wrap(sides[i])
+-- 		break
+-- 	end
 end
 
 
