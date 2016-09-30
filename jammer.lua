@@ -16,9 +16,7 @@ function signalJam(m,p)
 		_,poldy = p.getCursorPos()
 		p.setCursorPos(1,(poldy))
 		p.write("Channel "..tostring(i))
-		m.open(i)
 		m.transmit(i,i,"-Static-")
-		m.close(i)
 	end
 end
 
