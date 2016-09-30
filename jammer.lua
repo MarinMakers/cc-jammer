@@ -35,7 +35,7 @@ if (modem) then
 	enter(term)
 	while true do
 		signalJam(modem,term)
-		sleep(10)
+		sleep(0.5)
 	end
 else
 	term.write("No wireless modem found... Exiting.")
