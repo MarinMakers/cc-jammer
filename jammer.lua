@@ -7,7 +7,7 @@ term.write("Scanning 1- for open frequencies...")
 sides = {'front','back','left','right','top','bottom'}
 
 for i=1,#sides do
-	if (peripheral.getType(sides[i]) == "modem" & peripheral.call(sides[i], 'isWireless')) do
+	if (peripheral.getType(sides[i]) == "modem" and peripheral.call(sides[i], 'isWireless')) do
 		modem = peripheral.wrap(sides[i])
 		break
 	end
