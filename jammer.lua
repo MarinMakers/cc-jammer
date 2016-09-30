@@ -6,13 +6,12 @@ term.write("Scanning 1- for open frequencies...")
 
 sides = {'front','back','left','right','top','bottom'}
 
-function signalJam() do
+function signalJam()
 	for i=1,65535 do
 		modem.open(i)
 		modem.transmit(i,i,"-Static-")
 		modem.close(i)
 	end
-end
 end
 
 for i=1,#sides do
