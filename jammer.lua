@@ -13,6 +13,7 @@ function signalJam() do
 		modem.close(i)
 	end
 end
+end
 
 for i=1,#sides do
 	term.write(sides[i])
